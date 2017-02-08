@@ -21,6 +21,30 @@
 	bitesize = 6
 	filling_color = "#FA8072"
 
+/obj/item/weapon/reagent_containers/food/snacks/gekkonmeat
+	name = "gekkon fillet"
+	desc = "A fillet of gekkon meat."
+	icon_state = "fishfillet"
+	list_reagents = list("nutriment" = 6, "carpotoxin" = 1, "vitamin" = 4)
+	bitesize = 6
+	filling_color = "#FA8072"
+
+/obj/item/weapon/reagent_containers/food/snacks/moleratmeat
+	name = "molerat fillet"
+	desc = "A fillet of molerat meat."
+	icon_state = "fishfillet"
+	list_reagents = list("nutriment" = 3, "carpotoxin" = 3)
+	bitesize = 6
+	filling_color = "#FA8072"
+
+/obj/item/weapon/reagent_containers/food/snacks/deathmeat
+	name = "deathclaw fillet"
+	desc = "A fillet of deathclaw meat."
+	icon_state = "fishfillet"
+	list_reagents = list("nutriment" = 9, "vitamin" = 9)
+	bitesize = 6
+	filling_color = "#FA8072"
+
 /obj/item/weapon/reagent_containers/food/snacks/carpmeat/New()
 	..()
 	eatverb = pick("bite","chew","choke down","gnaw","swallow","chomp")

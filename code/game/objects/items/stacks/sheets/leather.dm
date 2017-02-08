@@ -33,6 +33,13 @@ var/global/list/datum/stack_recipe/corgi_recipes = list ( \
 	new/datum/stack_recipe("corgi costume", /obj/item/clothing/suit/hooded/ian_costume, 3, on_floor = 1), \
 	)
 
+/obj/item/stack/sheet/gekkonhide
+	name = "gekkon skin"
+	desc = "This is gekkon hide."
+	singular_name = "gekkon skin piece"
+	icon_state = "sheet-gekkonhide"
+	origin_tech = null
+
 /obj/item/stack/sheet/animalhide/corgi/New(var/loc, var/amount=null)
 	recipes = corgi_recipes
 	return ..()
