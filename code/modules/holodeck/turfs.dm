@@ -1,3 +1,4 @@
+
 /turf/open/floor/holofloor
 	icon_state = "floor"
 	thermal_conductivity = 0
@@ -41,6 +42,113 @@
 /turf/open/floor/holofloor/asteroid
 	name = "asteroid"
 	icon_state = "asteroid0"
+/turf/simulated/floor/wasteland/airless/cave
+	var/length = 100
+
+	var/mob_spawn_list = list("Badmutant" = 1, "Casador" = 3, "Rat" = 20)
+	var/sanity = 1
+
+/turf/indestructible/riveted
+	icon_state = "riveted"
+
+/turf/indestructible/riveted/New()
+	..()
+	if(smooth)
+		smooth_icon(src)
+		icon_state = ""
+
+/turf/indestructible/riveted/uranium
+	icon = 'icons/turf/walls/uranium_wall.dmi'
+	icon_state = "uranium"
+	smooth = SMOOTH_TRUE
+
+/turf/indestructible/abductor
+	icon_state = "alien1"
+
+/turf/indestructible/fakeglass
+	name = "window"
+	icon_state = "fakewindows"
+	opacity = 0
+
+/turf/indestructible/fakedoor
+	name = "Centcom Access"
+	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
+	icon_state = "fake_door"
+
+/turf/indestructible/rock
+	name = "dense rock"
+	desc = "An extremely densely-packed rock, most mining tools or explosives would never get through this."
+	icon = 'icons/turf/mining.dmi'
+	icon_state = "rock"
+//Test wall for Fallout 13
+
+/turf/indestructible/repconn //Space Age baby!
+	name = "wall"
+	desc = "All in all you're just another brick in the wall."
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "rock_labor"
+
+/turf/indestructible/robco //I'm an automatic man!
+	name = "window"
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "wastelandwindowfull"
+	opacity = 0
+
+/turf/indestructible/corvega //Driving paradise!
+	name = "locked door"
+	//icon = 'icons/obj/doors/wasteland_doors.dmi'
+	icon_state = "dirtystorechain"
+	density = 1
+
+/turf/indestructible/matrix //The Chosen One from Arroyo!
+	name = "matrix"
+	desc = "<font color='#157206'>You suddenly realize the truth - there is no spoon.<br>Digital simulation ends here.</font>"
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "matrix"
+
+/turf/indestructible/tunnel
+	name = "tunnel"
+	desc = "Just rapid moving wall"
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "Moving_tunnel"
+/turf/simulated/floor/wasteland/mountain
+	name = "mountain"
+	desc = "It's rocky floor."
+	//icon = 'icons/turf/floors2.dmi'
+	baseturf = /turf/simulated/floor/wasteland/mountain
+	icon_state = "mountain"
+	//temperature = 370
+
+/turf/simulated/floor/wasteland/snow/airless
+	//temperature = TCMB
+
+/turf/simulated/floor/wasteland/New()
+	var/proper_name = name
+	..()
+	name = proper_name
+	//if(prob(20))
+		//con_state = "[environment_type][rand(0,12)]"
+
+/turf/simulated/floor/wasteland/burn_tile()
+	return
+
+/*/turf/simulated/floor/wasteland/ex_act(severity, target)
+	contents_explosion(severity, target)
+	switch(severity)
+		if(3)
+			return
+		if(2)
+			if (prob(20))
+				src.gets_dug()
+		if(1)
+			src.gets_dug()
+	return*/
+
+/turf/simulated/floor/wasteland/singularity_act()
+	return
+
+/turf/simulated/floor/wasteland/singularity_pull(S, current_size)
+	return
 
 /turf/open/floor/holofloor/asteroid/New()
 	icon_state = "asteroid[pick(0,1,2,3,4,5,6,7,8,9,10,11,12)]"

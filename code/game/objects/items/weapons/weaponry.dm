@@ -199,6 +199,22 @@ var/highlander_claymores = 0
 /obj/item/weapon/katana/cursed
 	slot_flags = null
 
+/obj/item/weapon/machete
+	name = "Machete"
+	desc = "The machete appears to be a makeshift weapon, and consists of a lawn mower blade strapped to a wooden handle. It is the primary melee weapon of Caesar's Legion. Aside from having a low Strength requirement, it also does bonus damage to limbs."
+	icon_state = "machete"
+	item_state = "machete"
+	flags = CONDUCT
+	slot_flags = SLOT_BELT
+	force = 35
+	throwforce = 15
+	w_class = 3
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	block_chance = 20
+	sharpness = IS_SHARP
+	drawsound = 'sound/items/unholster_sword01.ogg'
+
 /obj/item/weapon/katana/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] stomach open with [src]! It looks like [user.p_theyre()] trying to commit seppuku!</span>")
 	return(BRUTELOSS)
